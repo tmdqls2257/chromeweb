@@ -1,10 +1,14 @@
 const title = document.querySelector("#title");
-title.innerHTML = "Hello World!";
-title.style.color = "red";
-document.title = "I own you now";
 
-function handleclick(){
-  title.style.color = "white";
+const CLICKED_CLASS = "clicked";
+
+function handleClick(){
+  title.classList.toggle(CLICKED_CLASS);//CLICKED_CLASS를 체크해주고 있으면 지워주고 없으면 만들어줌
 }
 
-title.addEventListener("click", handleclick);
+function init(){
+  title.addEventListener("click", handleClick);
+}
+
+init();
+
